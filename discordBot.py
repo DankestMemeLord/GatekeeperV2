@@ -79,7 +79,7 @@ class Gatekeeper(commands.Bot):
         await self.Handler.cog_auto_loader()
 
         # This Creates the Bot_perms Object and validates the File. Also Adds the Command.
-        if self.DBConfig.GetSetting('Permissions') == 'Custom':
+        if self.DBConfig.GetSetting('Permissions') == 1:
             await self.permissions_update()
 
     def self_check(self, message: discord.Message) -> bool:
